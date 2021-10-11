@@ -16,7 +16,6 @@ import kotlin.math.abs
 class MainActivity : AppCompatActivity(),
     DiscreteScrollView.OnItemChangedListener<HeroAdapter.HeroHolder>,
     DiscreteScrollView.ScrollListener<HeroAdapter.HeroHolder> {
-
     private val heroes = HeroesDataset().getHeroes()
     private var evaluator: ArgbEvaluator? = null
 
@@ -41,14 +40,8 @@ class MainActivity : AppCompatActivity(),
                 .build()
         )
 
-        itemChange(heroes[0])
     }
 
-  
-
-    override fun onCurrentItemChanged(viewHolder: HeroAdapter.HeroHolder?, adapterPosition: Int) {
-        itemChange(heroes[adapterPosition])
-    }
 
     override fun onScroll(
         scrollPosition: Float,
