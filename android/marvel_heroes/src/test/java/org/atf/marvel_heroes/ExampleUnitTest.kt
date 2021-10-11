@@ -1,4 +1,3 @@
-package org.atf.marvel_heroes
 
 /**
  * Example local unit test, which will execute on the development machine (host).
