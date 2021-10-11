@@ -1,4 +1,4 @@
-package org.atf.marvel_heroes
+package comics.fan.marvel_heroes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
