@@ -1,4 +1,4 @@
-package org.atf.marvel_heroes.heroes.adapter
+package comics.fan.marvel_heroes.heroes.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.View

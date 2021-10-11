@@ -1,4 +1,4 @@
-package org.atf.marvel_heroes.heroes
+package comics.fan.marvel_heroes.heroes
 
 import androidx.core.graphics.toColorInt
 import org.atf.marvel_heroes.R

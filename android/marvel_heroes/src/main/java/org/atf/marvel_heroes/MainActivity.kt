@@ -1,4 +1,4 @@
-package org.atf.marvel_heroes
+package comics.fan.marvel_heroes
 
 import android.animation.ArgbEvaluator
 import androidx.appcompat.app.AppCompatActivity
