@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity(),
         triangle?.invalidate()
     }
 
-    private fun interpolate(fraction: Float, c1: Int, c2: Int): Int {
-        return evaluator?.evaluate(fraction, c1, c2) as Int
+    private fun interpolate(fraction: Float, elem1: Int, elem2: Int): Int {
+        return evaluator?.evaluate(fraction, elem1, elem2) as Int
     }
 }
