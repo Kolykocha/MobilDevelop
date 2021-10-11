@@ -3,10 +3,10 @@ package comics.fan.marvel_heroes
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
-import org.junit.Test
-import org.junit.runner.RunWith
+import comics.junit.Test
+import comics.junit.runner.RunWith
 
-import org.junit.Assert.*
+import comics.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.

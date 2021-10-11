@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 
-import org.atf.marvel_heroes.R
-import org.atf.marvel_heroes.heroes.model.Hero
+import comics.fan.marvel_heroes.R
+import comics.fan.marvel_heroes.heroes.model.Hero
 
 
 class HeroAdapter(private val heroes: List<Hero>) : RecyclerView.Adapter<HeroAdapter.HeroHolder>() {

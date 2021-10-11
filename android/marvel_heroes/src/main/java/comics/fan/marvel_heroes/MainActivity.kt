@@ -3,11 +3,10 @@ package comics.fan.marvel_heroes
 import android.animation.ArgbEvaluator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import org.atf.marvel_heroes.R
-import org.atf.marvel_heroes.heroes.adapter.HeroAdapter
-import org.atf.marvel_heroes.heroes.HeroesDataset
-import org.atf.marvel_heroes.heroes.model.Hero
-import org.atf.marvel_heroes.custromViewes.TriangleView
+import comics.fan.marvel_heroes.R
+import comics.fan.marvel_heroes.heroes.adapter.HeroAdapter
+import comics.fan.marvel_heroes.heroes.HeroesDataset
+import comics.fan.marvel_heroes.heroes.model.Hero
 import com.yarolegovich.discretescrollview.DiscreteScrollView
 import com.yarolegovich.discretescrollview.transform.Pivot
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer
@@ -19,7 +18,6 @@ class MainActivity : AppCompatActivity(),
     DiscreteScrollView.ScrollListener<HeroAdapter.HeroHolder> {
 
     private val heroes = HeroesDataset().getHeroes()
-    private var triangle: TriangleView? = null
     private var evaluator: ArgbEvaluator? = null
 
 
@@ -28,7 +26,6 @@ class MainActivity : AppCompatActivity(),
         setContentView(R.layout.activity_main)
 
         evaluator = ArgbEvaluator()
-        triangle = findViewById(R.id.triangle)
 
         val heroesScrollView = findViewById<DiscreteScrollView>(R.id.picker)
 
@@ -47,10 +44,7 @@ class MainActivity : AppCompatActivity(),
         itemChange(heroes[0])
     }
 
-    private fun itemChange(hero: Hero) {
-        triangle?.colorPaint = hero.color
-        triangle?.invalidate()
-    }
+  
 
     override fun onCurrentItemChanged(viewHolder: HeroAdapter.HeroHolder?, adapterPosition: Int) {
         itemChange(heroes[adapterPosition])
@@ -65,8 +59,6 @@ class MainActivity : AppCompatActivity(),
     ) {
         val prevHero = heroes[currentPosition]
         val hero = heroes[newPosition]
-        triangle?.colorPaint = interpolate(abs(scrollPosition), prevHero.color, hero.color)
-        triangle?.invalidate()
     }
 
     private fun interpolate(fraction: Float, elem1: Int, elem2: Int): Int {
