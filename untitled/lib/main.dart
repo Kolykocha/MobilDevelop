@@ -5,19 +5,18 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'MARVEL APP';
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
+    return const MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
-        body: const MyStatelessWidget(),
+        body: MyStatelessWidget(),
       ),
     );
   }
 }
+
+
 
 class MyStatelessWidget extends StatelessWidget {
   const MyStatelessWidget({Key? key}) : super(key: key);
@@ -34,37 +33,34 @@ class MyStatelessWidget extends StatelessWidget {
         body: Stack(
           children:<Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(20.0,0.0,20,0),
+              padding: const EdgeInsets.fromLTRB(20,0,20,0),
               child: Image.asset('img/marvel.png'),),
             const SizedBox(
-              width: 800.0,
-              height: 300.0,
+              width: 800,
+              height: 300,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(80.0,110.0,0,0),
-                child: Text("Choose your hero",style: TextStyle(color: Colors.white, fontSize: 30.0),),),
+                padding: EdgeInsets.fromLTRB(80,110,0,0),
+                child: Text("Choose your hero",style: TextStyle(color: Colors.white, fontSize: 30),),),
             ),
-            Padding(
 
+            Padding(
               padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
 
-              child: ListView(
+              child: PageView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Stack(
                     children: <Widget>[
-                      Container(
-                        color: Colors.black,
-                        child: Image.asset(
-                          'img/knull.jpg',
-                          width: 400,
-                          height: 800.0,
-                        ),
+                      Image.asset(
+                        'img/knull.jpg',
+                        width: 400,
+                        height: 800,
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(5, 200.0, 20, 0),
+                        padding: EdgeInsets.fromLTRB(5, 200, 20, 0),
                         child: Text(
                           "Knull",
-                          style: TextStyle(color: Colors.white, fontSize: 60.0),
+                          style: TextStyle(color: Colors.white, fontSize: 60),
                         ),
                       ),
                     ],
@@ -72,65 +68,59 @@ class MyStatelessWidget extends StatelessWidget {
 
                   Stack(
                     children: <Widget>[
-                      Container(
-                        color: Colors.black,
-                        child: Image.asset(
-                          'img/gwen-spider.jpg',
-                          width: 400,
-                          height: 800.0,
-                        ),
+                      Image.asset(
+                        'img/gwen-spider.jpg',
+                        width: 400,
+                        height: 800,
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(5, 250.0, 20, 0),
+                        padding: EdgeInsets.fromLTRB(5, 250, 20, 0),
                         child: Text(
                           "Spider-Gwen",
-                          style: TextStyle(color: Colors.white, fontSize: 50.0),
+                          style: TextStyle(color: Colors.white, fontSize: 50),
                         ),
                       ),
                     ],
                   ),
                   Stack(
                     children: <Widget>[
-                      Container(
-                        color: Colors.black,
-                        child: Image.asset(
-                          'img/scarlet-spider.jpg',
-                          width: 400,
-                          height: 800.0,
-                        ),
+                      Image.asset(
+                        'img/scarlet-spider.jpg',
+                        width: 400,
+                        height: 800,
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(5, 250.0, 20, 0),
+                        padding: EdgeInsets.fromLTRB(5, 250, 20, 0),
                         child: Text(
                           "Scarlet-spider",
-                          style: TextStyle(color: Colors.white, fontSize: 50.0),
+                          style: TextStyle(color: Colors.white, fontSize: 50),
                         ),
                       ),
                     ],
                   ),
                   Stack(
                     children: <Widget>[
-                      Container(
-                        color: Colors.black,
-                        child: Image.asset(
-                          'img/magik.jpg',
-                          width: 400,
-                          height: 800.0,
-                        ),
+                      Image.asset(
+                        'img/magik.jpg',
+                        width: 400,
+                        height: 800,
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(10, 250.0, 20, 0),
+                        padding: EdgeInsets.fromLTRB(10, 250, 20, 0),
                         child: Text(
                           "Magik",
-                          style: TextStyle(color: Colors.white, fontSize: 50.0),
+                          style: TextStyle(color: Colors.white, fontSize: 50),
                         ),
                       ),
                     ],
                   ),
                 ],
               ),
+
+
             ),
           ],
+
         ),
       ),
     );
