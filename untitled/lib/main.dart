@@ -23,6 +23,7 @@ class MyStatelessWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       theme: ThemeData(
           brightness: Brightness.dark,
@@ -31,13 +32,15 @@ class MyStatelessWidget extends StatelessWidget {
       home: Scaffold(
 
         body: Stack(
+
           children:<Widget>[
             Padding(
               padding: const EdgeInsets.fromLTRB(20,0,20,0),
-              child: Image.asset('img/marvel.png'),),
+              child: Image.asset('img/marvel.png')),
             const SizedBox(
               width: 800,
               height: 300,
+
               child: Padding(
                 padding: EdgeInsets.fromLTRB(80,110,0,0),
                 child: Text("Choose your hero",style: TextStyle(color: Colors.white, fontSize: 30),),),
@@ -50,11 +53,12 @@ class MyStatelessWidget extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Stack(
+                    fit: StackFit.expand,
                     children: <Widget>[
                       Image.asset(
                         'img/knull.jpg',
-                        width: 400,
-                        height: 800,
+
+                        fit: BoxFit.fill,
                       ),
                       const Padding(
                         padding: EdgeInsets.fromLTRB(5, 200, 20, 0),
@@ -67,11 +71,11 @@ class MyStatelessWidget extends StatelessWidget {
                   ), //knull
 
                   Stack(
+                    fit: StackFit.expand,
                     children: <Widget>[
                       Image.asset(
                         'img/gwen-spider.jpg',
-                        width: 400,
-                        height: 800,
+                        fit: BoxFit.fill,
                       ),
                       const Padding(
                         padding: EdgeInsets.fromLTRB(5, 250, 20, 0),
@@ -83,11 +87,11 @@ class MyStatelessWidget extends StatelessWidget {
                     ],
                   ),
                   Stack(
+                    fit: StackFit.expand,
                     children: <Widget>[
                       Image.asset(
                         'img/scarlet-spider.jpg',
-                        width: 400,
-                        height: 800,
+                        fit: BoxFit.fill,
                       ),
                       const Padding(
                         padding: EdgeInsets.fromLTRB(5, 250, 20, 0),
@@ -99,11 +103,11 @@ class MyStatelessWidget extends StatelessWidget {
                     ],
                   ),
                   Stack(
+                    fit: StackFit.expand,
                     children: <Widget>[
                       Image.asset(
                         'img/magik.jpg',
-                        width: 400,
-                        height: 800,
+                          fit: BoxFit.fill,
                       ),
                       const Padding(
                         padding: EdgeInsets.fromLTRB(10, 250, 20, 0),
